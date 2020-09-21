@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FingerPrint" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" />
+      <xsd:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BCA.FingerPrint.Service.Contract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFingerPrint_Connect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_Connect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetUserAdminCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAdminCount" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetUserAdminCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAdminCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetResignNip_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResignNip" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetResignNip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResignNipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateSystemAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateSystemAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateSystemAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateSystemAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateDuplicateBdsIdForUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDuplicateBdsIdForUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateDuplicateBdsIdForUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDuplicateBdsIdForUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_Enrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Enrollment" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_Enrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_MultipleEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_MultipleEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_IsMigrationCompleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsMigrationCompleted" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_IsMigrationCompleted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsMigrationCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_WeekendBanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeekendBanking" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_WeekendBanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeekendBankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_JobDeleteWeekendBanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:JobDeleteWeekendBanking" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_JobDeleteWeekendBanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JobDeleteWeekendBankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_IdentifyFinger_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentifyFinger" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_IdentifyFinger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentifyFingerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_VerifyFinger_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFinger" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_VerifyFinger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFingerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_VerifyFingerBDS_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFingerBDS" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_VerifyFingerBDS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFingerBDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_VerifyFingerBDSDummy_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFingerBDSDummy" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_VerifyFingerBDSDummy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyFingerBDSDummyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_SaveJobDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobDelete" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_SaveJobDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveJobDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_UpdateOnServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOnServer" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_UpdateOnServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOnServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_DeleteOnServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOnServer" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_DeleteOnServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOnServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetPagedUserInquiryByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagedUserInquiryByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetPagedUserInquiryByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagedUserInquiryByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetActivityInquiryByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityInquiryByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetActivityInquiryByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityInquiryByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetPagedActivityInquiryByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagedActivityInquiryByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetPagedActivityInquiryByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagedActivityInquiryByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_CleanUpMigrationCentralData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CleanUpMigrationCentralData" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_CleanUpMigrationCentralData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CleanUpMigrationCentralDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetMigrationBDSIDInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMigrationBDSIDInfo" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetMigrationBDSIDInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMigrationBDSIDInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetUserRegistrationInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRegistrationInfo" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetUserRegistrationInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRegistrationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_SaveUserAdminOnServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserAdminOnServer" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_SaveUserAdminOnServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserAdminOnServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_DeleteUserAdminOnServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserAdminOnServer" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_DeleteUserAdminOnServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserAdminOnServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateIsUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateIsUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_ValidateIsUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateIsUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetPagedUserAdminInquiryByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagedUserAdminInquiryByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IFingerPrint_GetPagedUserAdminInquiryByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagedUserAdminInquiryByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFingerPrint">
+    <wsdl:operation name="Connect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/Connect" message="tns:IFingerPrint_Connect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/ConnectResponse" message="tns:IFingerPrint_Connect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAdminCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetUserAdminCount" message="tns:IFingerPrint_GetUserAdminCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetUserAdminCountResponse" message="tns:IFingerPrint_GetUserAdminCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResignNip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetResignNip" message="tns:IFingerPrint_GetResignNip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetResignNipResponse" message="tns:IFingerPrint_GetResignNip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSystemAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/ValidateSystemAdmin" message="tns:IFingerPrint_ValidateSystemAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/ValidateSystemAdminResponse" message="tns:IFingerPrint_ValidateSystemAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEnrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/ValidateEnrollment" message="tns:IFingerPrint_ValidateEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/ValidateEnrollmentResponse" message="tns:IFingerPrint_ValidateEnrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDuplicateBdsIdForUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/ValidateDuplicateBdsIdForUpdate" message="tns:IFingerPrint_ValidateDuplicateBdsIdForUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/ValidateDuplicateBdsIdForUpdateResponse" message="tns:IFingerPrint_ValidateDuplicateBdsIdForUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Enrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/Enrollment" message="tns:IFingerPrint_Enrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/EnrollmentResponse" message="tns:IFingerPrint_Enrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleEnrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/MultipleEnrollment" message="tns:IFingerPrint_MultipleEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/MultipleEnrollmentResponse" message="tns:IFingerPrint_MultipleEnrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMigrationCompleted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/IsMigrationCompleted" message="tns:IFingerPrint_IsMigrationCompleted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/IsMigrationCompletedResponse" message="tns:IFingerPrint_IsMigrationCompleted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WeekendBanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/WeekendBanking" message="tns:IFingerPrint_WeekendBanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/WeekendBankingResponse" message="tns:IFingerPrint_WeekendBanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JobDeleteWeekendBanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/JobDeleteWeekendBanking" message="tns:IFingerPrint_JobDeleteWeekendBanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/JobDeleteWeekendBankingResponse" message="tns:IFingerPrint_JobDeleteWeekendBanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyFinger">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/IdentifyFinger" message="tns:IFingerPrint_IdentifyFinger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/IdentifyFingerResponse" message="tns:IFingerPrint_IdentifyFinger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFinger">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/VerifyFinger" message="tns:IFingerPrint_VerifyFinger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/VerifyFingerResponse" message="tns:IFingerPrint_VerifyFinger_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFingerBDS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/VerifyFingerBDS" message="tns:IFingerPrint_VerifyFingerBDS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/VerifyFingerBDSResponse" message="tns:IFingerPrint_VerifyFingerBDS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFingerBDSDummy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/VerifyFingerBDSDummy" message="tns:IFingerPrint_VerifyFingerBDSDummy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/VerifyFingerBDSDummyResponse" message="tns:IFingerPrint_VerifyFingerBDSDummy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/SaveJobDelete" message="tns:IFingerPrint_SaveJobDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/SaveJobDeleteResponse" message="tns:IFingerPrint_SaveJobDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOnServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/UpdateOnServer" message="tns:IFingerPrint_UpdateOnServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/UpdateOnServerResponse" message="tns:IFingerPrint_UpdateOnServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOnServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/DeleteOnServer" message="tns:IFingerPrint_DeleteOnServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/DeleteOnServerResponse" message="tns:IFingerPrint_DeleteOnServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagedUserInquiryByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetPagedUserInquiryByCriteria" message="tns:IFingerPrint_GetPagedUserInquiryByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetPagedUserInquiryByCriteriaResponse" message="tns:IFingerPrint_GetPagedUserInquiryByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityInquiryByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetActivityInquiryByCriteria" message="tns:IFingerPrint_GetActivityInquiryByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetActivityInquiryByCriteriaResponse" message="tns:IFingerPrint_GetActivityInquiryByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagedActivityInquiryByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetPagedActivityInquiryByCriteria" message="tns:IFingerPrint_GetPagedActivityInquiryByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetPagedActivityInquiryByCriteriaResponse" message="tns:IFingerPrint_GetPagedActivityInquiryByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CleanUpMigrationCentralData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/CleanUpMigrationCentralData" message="tns:IFingerPrint_CleanUpMigrationCentralData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/CleanUpMigrationCentralDataResponse" message="tns:IFingerPrint_CleanUpMigrationCentralData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMigrationBDSIDInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetMigrationBDSIDInfo" message="tns:IFingerPrint_GetMigrationBDSIDInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetMigrationBDSIDInfoResponse" message="tns:IFingerPrint_GetMigrationBDSIDInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegistrationInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetUserRegistrationInfo" message="tns:IFingerPrint_GetUserRegistrationInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetUserRegistrationInfoResponse" message="tns:IFingerPrint_GetUserRegistrationInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserAdminOnServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/SaveUserAdminOnServer" message="tns:IFingerPrint_SaveUserAdminOnServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/SaveUserAdminOnServerResponse" message="tns:IFingerPrint_SaveUserAdminOnServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserAdminOnServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/DeleteUserAdminOnServer" message="tns:IFingerPrint_DeleteUserAdminOnServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/DeleteUserAdminOnServerResponse" message="tns:IFingerPrint_DeleteUserAdminOnServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsUserLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/ValidateIsUserLogin" message="tns:IFingerPrint_ValidateIsUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/ValidateIsUserLoginResponse" message="tns:IFingerPrint_ValidateIsUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagedUserAdminInquiryByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFingerPrint/GetPagedUserAdminInquiryByCriteria" message="tns:IFingerPrint_GetPagedUserAdminInquiryByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFingerPrint/GetPagedUserAdminInquiryByCriteriaResponse" message="tns:IFingerPrint_GetPagedUserAdminInquiryByCriteria_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFingerPrint" type="tns:IFingerPrint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Connect">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/Connect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAdminCount">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetUserAdminCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResignNip">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetResignNip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSystemAdmin">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/ValidateSystemAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEnrollment">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/ValidateEnrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDuplicateBdsIdForUpdate">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/ValidateDuplicateBdsIdForUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enrollment">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/Enrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleEnrollment">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/MultipleEnrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMigrationCompleted">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/IsMigrationCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeekendBanking">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/WeekendBanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JobDeleteWeekendBanking">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/JobDeleteWeekendBanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyFinger">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/IdentifyFinger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFinger">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/VerifyFinger" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFingerBDS">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/VerifyFingerBDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyFingerBDSDummy">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/VerifyFingerBDSDummy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveJobDelete">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/SaveJobDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOnServer">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/UpdateOnServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOnServer">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/DeleteOnServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagedUserInquiryByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetPagedUserInquiryByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityInquiryByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetActivityInquiryByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagedActivityInquiryByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetPagedActivityInquiryByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CleanUpMigrationCentralData">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/CleanUpMigrationCentralData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMigrationBDSIDInfo">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetMigrationBDSIDInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegistrationInfo">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetUserRegistrationInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserAdminOnServer">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/SaveUserAdminOnServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserAdminOnServer">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/DeleteUserAdminOnServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsUserLogin">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/ValidateIsUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagedUserAdminInquiryByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IFingerPrint/GetPagedUserAdminInquiryByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FingerPrint">
+    <wsdl:port name="BasicHttpBinding_IFingerPrint" binding="tns:BasicHttpBinding_IFingerPrint">
+      <soap:address location="http://bca-fingerprintservice.com:97/FingerPrint.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

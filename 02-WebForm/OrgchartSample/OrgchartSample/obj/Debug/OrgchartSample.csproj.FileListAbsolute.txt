@@ -1,0 +1,6 @@
+D:\03-Labs\02-WebForm\OrgchartSample\OrgchartSample\bin\OrgchartSample.dll.config
+D:\03-Labs\02-WebForm\OrgchartSample\OrgchartSample\bin\OrgchartSample.dll
+D:\03-Labs\02-WebForm\OrgchartSample\OrgchartSample\bin\OrgchartSample.pdb
+D:\03-Labs\02-WebForm\OrgchartSample\OrgchartSample\obj\Debug\OrgchartSample.csprojResolveAssemblyReference.cache
+D:\03-Labs\02-WebForm\OrgchartSample\OrgchartSample\obj\Debug\OrgchartSample.dll
+D:\03-Labs\02-WebForm\OrgchartSample\OrgchartSample\obj\Debug\OrgchartSample.pdb

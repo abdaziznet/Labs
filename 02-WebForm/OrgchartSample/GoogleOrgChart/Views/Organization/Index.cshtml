@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Organization</h2>
+<div class="row">
+    <div class="col-md-4">
+        <button class="btn btn-primary"  id="btnOrganization" >Click me!</button>
+    </div>
+</div>
+<div id="chart_div"></div>
+
+@Html.Hidden("GetOrganizationData", Html.Raw(Url.Action("GetOrganizationData", "Organization")))
+

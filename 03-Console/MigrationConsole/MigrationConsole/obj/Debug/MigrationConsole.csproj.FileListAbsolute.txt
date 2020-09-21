@@ -1,0 +1,6 @@
+D:\03-Labs\03-Console\MigrationConsole\MigrationConsole\bin\Debug\MigrationConsole.exe.config
+D:\03-Labs\03-Console\MigrationConsole\MigrationConsole\bin\Debug\MigrationConsole.exe
+D:\03-Labs\03-Console\MigrationConsole\MigrationConsole\bin\Debug\MigrationConsole.pdb
+D:\03-Labs\03-Console\MigrationConsole\MigrationConsole\obj\Debug\MigrationConsole.csprojResolveAssemblyReference.cache
+D:\03-Labs\03-Console\MigrationConsole\MigrationConsole\obj\Debug\MigrationConsole.exe
+D:\03-Labs\03-Console\MigrationConsole\MigrationConsole\obj\Debug\MigrationConsole.pdb

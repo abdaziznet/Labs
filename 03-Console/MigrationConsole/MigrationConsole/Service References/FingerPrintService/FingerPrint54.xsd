@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddressType" type="xs:short" />
+      <xs:element minOccurs="0" name="OfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientInfo" nillable="true" type="tns:ClientInfo" />
+  <xs:complexType name="EnrollmentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:short" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageMap" type="xs:short" />
+      <xs:element minOccurs="0" name="MainBranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainOfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quality" type="xs:short" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubType" type="xs:short" />
+      <xs:element minOccurs="0" name="TemplateLayout" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCategory" type="xs:short" />
+      <xs:element minOccurs="0" name="UserFAR" type="xs:double" />
+      <xs:element minOccurs="0" name="UserType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnrollmentInfo" nillable="true" type="tns:EnrollmentInfo" />
+  <xs:complexType name="UserInfoContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="EndPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="MainBranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainOfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceIpType" type="xs:int" />
+      <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubType" type="xs:int" />
+      <xs:element minOccurs="0" name="UserLogon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfoContract" nillable="true" type="tns:UserInfoContract" />
+  <xs:complexType name="FSImages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FSImages0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImagesIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FSImages" nillable="true" type="tns:FSImages" />
+  <xs:complexType name="ArrayOfMultipleEnrollmentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MultipleEnrollmentInfo" nillable="true" type="tns:MultipleEnrollmentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMultipleEnrollmentInfo" nillable="true" type="tns:ArrayOfMultipleEnrollmentInfo" />
+  <xs:complexType name="MultipleEnrollmentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BDS1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:short" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FPId" type="xs:int" />
+      <xs:element minOccurs="0" name="FSImages0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImages9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSImagesIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageMap" type="xs:short" />
+      <xs:element minOccurs="0" name="MainBranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainOfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quality" type="xs:short" />
+      <xs:element minOccurs="0" name="SourceIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceIPType" type="xs:short" />
+      <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubType" type="xs:short" />
+      <xs:element minOccurs="0" name="TemplateLayout" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCategory" type="xs:short" />
+      <xs:element minOccurs="0" name="UserFAR" type="xs:double" />
+      <xs:element minOccurs="0" name="UserType" type="xs:short" />
+      <xs:element minOccurs="0" name="template" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MultipleEnrollmentInfo" nillable="true" type="tns:MultipleEnrollmentInfo" />
+  <xs:complexType name="ArrayOfMigrationCentralException">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MigrationCentralException" nillable="true" type="tns:MigrationCentralException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMigrationCentralException" nillable="true" type="tns:ArrayOfMigrationCentralException" />
+  <xs:complexType name="MigrationCentralException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExceptionCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ExceptionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FPId" type="xs:int" />
+      <xs:element minOccurs="0" name="OfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MigrationCentralException" nillable="true" type="tns:MigrationCentralException" />
+  <xs:complexType name="WeekendBankingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BDS1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDS9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartPeriod" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeekendBankingInfo" nillable="true" type="tns:WeekendBankingInfo" />
+  <xs:complexType name="MatchInfoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="MatchCount" type="xs:int" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatchInfoResult" nillable="true" type="tns:MatchInfoResult" />
+  <xs:complexType name="ArrayOfUserListContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserListContract" nillable="true" type="tns:UserListContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserListContract" nillable="true" type="tns:ArrayOfUserListContract" />
+  <xs:complexType name="UserListContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BdsId1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BdsId9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="KodeAlihDaya" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quality" type="xs:int" />
+      <xs:element minOccurs="0" name="Shift" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserListContract" nillable="true" type="tns:UserListContract" />
+  <xs:complexType name="ArrayOfMigrationBDSIDInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MigrationBDSIDInfo" nillable="true" type="tns:MigrationBDSIDInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMigrationBDSIDInfo" nillable="true" type="tns:ArrayOfMigrationBDSIDInfo" />
+  <xs:complexType name="MigrationBDSIDInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BDSID1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDSID2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MigrationBDSIDInfo" nillable="true" type="tns:MigrationBDSIDInfo" />
+  <xs:complexType name="UserRegistrationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FsCentralId" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quality" type="xs:short" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubType" type="xs:short" />
+      <xs:element minOccurs="0" name="TemplateLayout" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRegistrationInfo" nillable="true" type="tns:UserRegistrationInfo" />
+  <xs:complexType name="UserAdminContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceIPType" type="xs:int" />
+      <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserAdminContract" nillable="true" type="tns:UserAdminContract" />
+  <xs:complexType name="OperationResultContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="OperationMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationStatus" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultContract" nillable="true" type="tns:OperationResultContract" />
+  <xs:complexType name="ArrayOfUserAdminContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserAdminContract" nillable="true" type="tns:UserAdminContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserAdminContract" nillable="true" type="tns:ArrayOfUserAdminContract" />
+</xs:schema>

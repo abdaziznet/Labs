@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" />
+  <xs:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://bca-fingerprintservice.com:97/FingerPrint.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BCA.FingerPrint.Service.Contract" />
+  <xs:element name="Connect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q1:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConnectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConnectResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAdminCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q2:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAdminCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserAdminCountResult" type="xs:int" />
+        <xs:element minOccurs="0" name="adminCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResignNip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q3:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResignNipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetResignNipResult" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="resignNipResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateSystemAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q5:ClientInfo" />
+        <xs:element minOccurs="0" name="nip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="officeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateSystemAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateSystemAdminResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEnrollment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q6:ClientInfo" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="template" nillable="true" type="q7:ArrayOfstring" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="info" nillable="true" type="q8:EnrollmentInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEnrollmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateEnrollmentResult" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDuplicateBdsIdForUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userInfoContract" nillable="true" type="q9:UserInfoContract" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bdsIdCollection" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDuplicateBdsIdForUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDuplicateBdsIdForUpdateResult" type="xs:int" />
+        <xs:element minOccurs="0" name="errMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Enrollment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="template" nillable="true" type="q11:ArrayOfstring" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="info" nillable="true" type="q12:EnrollmentInfo" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="images" nillable="true" type="q13:FSImages" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q14:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnrollmentResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MultipleEnrollment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q15:ClientInfo" />
+        <xs:element minOccurs="0" name="transactionGuidId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="info" nillable="true" type="q16:ArrayOfMultipleEnrollmentInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MultipleEnrollmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MultipleEnrollmentResult" type="xs:int" />
+        <xs:element minOccurs="0" name="successCount" type="xs:int" />
+        <xs:element minOccurs="0" name="errorDuplicateCount" type="xs:int" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="exceptionList" nillable="true" type="q17:ArrayOfMigrationCentralException" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMigrationCompleted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q18:ClientInfo" />
+        <xs:element minOccurs="0" name="transactionGuidId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMigrationCompletedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsMigrationCompletedResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WeekendBanking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="weekendBankingInfo" nillable="true" type="q19:WeekendBankingInfo" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q20:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WeekendBankingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WeekendBankingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JobDeleteWeekendBanking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="nipWBCollection" nillable="true" type="q21:ArrayOfstring" />
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="nipWBCombinationCollection" nillable="true" type="q22:ArrayOfstring" />
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="officeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q23:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JobDeleteWeekendBankingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JobDeleteWeekendBankingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdentifyFinger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="template" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q24:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdentifyFingerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdentifyFingerResult" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="matchInfoResult" nillable="true" type="q25:MatchInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyFinger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="template" nillable="true" type="xs:string" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q26:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyFingerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyFingerResult" type="xs:int" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="matchInfoResult" nillable="true" type="q27:MatchInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyFingerBDS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bdsId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="template" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q28:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyFingerBDSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyFingerBDSResult" type="xs:int" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="matchInfoResult" nillable="true" type="q29:MatchInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyFingerBDSDummy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bdsId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="template" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q30:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyFingerBDSDummyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyFingerBDSDummyResult" type="xs:int" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="matchInfoResult" nillable="true" type="q31:MatchInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveJobDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="nipCollection" nillable="true" type="q32:ArrayOfstring" />
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="officeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q33:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveJobDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveJobDeleteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOnServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userInfoContract" nillable="true" type="q34:UserInfoContract" />
+        <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bdsIdCollection" nillable="true" type="q35:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOnServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOnServerResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOnServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userInfoContract" nillable="true" type="q36:UserInfoContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOnServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteOnServerResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagedUserInquiryByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="officeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfItems" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagedUserInquiryByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="GetPagedUserInquiryByCriteriaResult" nillable="true" type="q37:ArrayOfUserListContract" />
+        <xs:element minOccurs="0" name="numberOfItems" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityInquiryByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="actionName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="officeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityInquiryByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BCA.FingerPrint.Service.Contract" minOccurs="0" name="GetActivityInquiryByCriteriaResult" nillable="true" type="q38:ArrayOfActivityContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagedActivityInquiryByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="actionName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="officeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfItems" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagedActivityInquiryByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BCA.FingerPrint.Service.Contract" minOccurs="0" name="GetPagedActivityInquiryByCriteriaResult" nillable="true" type="q39:ArrayOfActivityContract" />
+        <xs:element minOccurs="0" name="numberOfItems" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CleanUpMigrationCentralData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="nipCollection" nillable="true" type="q40:ArrayOfstring" />
+        <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q41:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CleanUpMigrationCentralDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CleanUpMigrationCentralDataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMigrationBDSIDInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q42:ClientInfo" />
+        <xs:element minOccurs="0" name="transactionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMigrationBDSIDInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="GetMigrationBDSIDInfoResult" nillable="true" type="q43:ArrayOfMigrationBDSIDInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRegistrationInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="clientInfo" nillable="true" type="q44:ClientInfo" />
+        <xs:element minOccurs="0" name="nip" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRegistrationInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserRegistrationInfoResult" type="xs:int" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userRegistrationInfo" nillable="true" type="q45:UserRegistrationInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserAdminOnServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userAdminContract" nillable="true" type="q46:UserAdminContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserAdminOnServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="SaveUserAdminOnServerResult" nillable="true" type="q47:OperationResultContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserAdminOnServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userAdminContract" nillable="true" type="q48:UserAdminContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserAdminOnServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="DeleteUserAdminOnServerResult" nillable="true" type="q49:OperationResultContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateIsUserLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="userAdminContract" nillable="true" type="q50:UserAdminContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateIsUserLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="ValidateIsUserLoginResult" nillable="true" type="q51:OperationResultContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagedUserAdminInquiryByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfItems" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagedUserAdminInquiryByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Ivatama.FingerPrint.Service.Contract" minOccurs="0" name="GetPagedUserAdminInquiryByCriteriaResult" nillable="true" type="q52:ArrayOfUserAdminContract" />
+        <xs:element minOccurs="0" name="numberOfItems" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
