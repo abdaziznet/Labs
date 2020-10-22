@@ -1,0 +1,8 @@
+@startuml
+
+actor "User" as user
+node "Kotlin RESTful API"{
+
+}
+
+@enduml
