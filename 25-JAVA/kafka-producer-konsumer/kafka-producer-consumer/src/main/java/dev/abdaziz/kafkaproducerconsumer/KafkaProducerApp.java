@@ -1,7 +1,6 @@
 package dev.abdaziz.kafkaproducerconsumer;
 
 import java.util.Properties;
-
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -21,10 +20,15 @@ public class KafkaProducerApp {
             props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
             Producer<String, String> producer = new KafkaProducer<>(props);
-            for (int i = 200; i < 1000; i++)
-                producer.send(new ProducerRecord<String, String>("topic-java", "masuk data ke " + Integer.toString(i)));
+
+            for (int i = 1; i <= 5; i++) {
+                producer.send(
+                        new ProducerRecord<String, String>("topic-order", "beli produk ke " + Integer.toString(i)));
+            }
+            producer.send(new ProducerRecord<String, String>("topic-email", "Terima kasih sudah membeli produk kami"));
             producer.close();
 
+            //
         } catch (Exception e) {
             System.out.println("error with message: " + e.getMessage());
         }

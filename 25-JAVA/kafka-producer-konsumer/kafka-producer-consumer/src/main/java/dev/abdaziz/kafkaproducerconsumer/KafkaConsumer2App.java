@@ -9,7 +9,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
-public class KafkaConsumerApp {
+public class KafkaConsumer2App {
     public static void main(String[] args) {
         try {
             Properties props = new Properties();
@@ -21,7 +21,7 @@ public class KafkaConsumerApp {
             props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 
             KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
-            consumer.subscribe(Arrays.asList("topic-order"));
+            consumer.subscribe(Arrays.asList("topic-email"));
 
             while (true) {
                 ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
