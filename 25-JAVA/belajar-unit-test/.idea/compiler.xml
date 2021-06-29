@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="belajar-unit-test" target="1.7" />
+      <module name="belajar-unit-test" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>

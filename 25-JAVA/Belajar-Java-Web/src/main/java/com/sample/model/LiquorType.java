@@ -1,2 +1,6 @@
-package com.sample.model;public class LiquorType {
+package com.sample.model;
+
+public enum LiquorType {
+    WINE,BEER,WHISKY
+
 }
