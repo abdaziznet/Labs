@@ -20,8 +20,8 @@ public class RestDemoController {
     FirebaseService firebaseService;
 
     @GetMapping("/getUserDetails")
-    public Person getExample(@RequestHeader() String name) throws InterruptedException, ExecutionException {
-        return new Person(name, "30", "Dallas");
+    public Person getUserDetails(@RequestHeader String name) throws InterruptedException, ExecutionException {
+        return firebaseService.getUserDetails(name);
     }
 
     @PostMapping("/createUser")
@@ -30,13 +30,13 @@ public class RestDemoController {
     }
 
     @PutMapping("/updateUser")
-    public String putExample(@RequestBody Person person) throws InterruptedException, ExecutionException {
-        return "Updated User" + person.getName();
+    public String updateUser(@RequestBody Person person) {
+        return "Updated user " + person.getName();
     }
 
     @DeleteMapping("/deleteUser")
-    public String deleteExample(@RequestHeader String name) {
-        return "Deleted User " + name;
+    public String deleteUser(@RequestHeader String name) throws InterruptedException, ExecutionException {
+        return firebaseService.deleteUser(name);
     }
 
 }
