@@ -1,17 +1,21 @@
 version: "3.9"
-  service:
-    databaseserver:
-      image: mysql:5.7
-      environment:
-        MYSQL_DATABASE: bukutamudb
-        MYSQL_USER: admin
-        MYSQL_PASSWORD: P@ssw0rd
-        MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-      volumes:
-        - "opt/mysql-data:/var/lib/mysql"
+services:
+  databaseserver:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: bukutamudb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: P@ssw0rd
+    volumes:
+      - "/opt/mysql-data:/var/lib/mysql"
   aplikasi:
     image: abdaziz/springboot-bukutamu
+    depends_on:
+      - databaseserver
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://databaseserver/bukutamudb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: P@ssw0rd
     ports:
       - "8080:80"
